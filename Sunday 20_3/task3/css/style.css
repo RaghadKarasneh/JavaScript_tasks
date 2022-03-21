@@ -1,0 +1,21 @@
+.container{
+    background: #525151;
+    color: white;
+    width: 25%;
+    padding: 25px;
+    line-height: 2;
+}
+#html_operation,
+#fnum,
+#snum,
+#result{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media screen and (max-width:600px) {
+    .container{
+        width: 50%;
+    }
+    
+}

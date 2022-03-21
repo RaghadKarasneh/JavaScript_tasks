@@ -1,0 +1,23 @@
+.container{
+    background: #525151;
+    color: white;
+    width: 25%;
+    padding: 25px;
+    line-height: 2;
+}
+#fnum,
+#snum,
+#tnum,
+#result1,
+#result2,
+#result3{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media screen and (max-width:600px) {
+    .container{
+        width: 50%;
+    }
+    
+}

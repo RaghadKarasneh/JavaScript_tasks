@@ -1,0 +1,50 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(12,auto);
+    grid-template-rows: repeat(4,auto);
+    gap:10px
+}
+.container div{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.one{
+    grid-area: 1/1;
+    grid-column: 1/13;
+    background-color: red;
+}
+.two{
+    grid-area: 2/1;
+    grid-column: 1/7;
+    background-color: green;
+}
+.three{
+    grid-area: 2/7;
+    grid-column: 7/13;
+    background-color: gray;
+}
+.four{
+    grid-area: 3/1;
+    grid-column: 1/13;
+    background-color: blue;
+}
+.five{
+    grid-area: 4/4;
+    grid-column: 5/9;
+    background-color: orange;
+}
+@media screen and (max-width:700px) {
+    .container{
+        display: block;
+    }
+    .container div {
+        margin-top: 20px;
+    }
+    .container p{
+        position: relative;
+        top: 30%;
+    }
+    
+}
