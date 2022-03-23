@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom & Events</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!--Start Task 1-->
+    <h1>Task 1:</h1>
+    <div id="container_task1" onmouseover="changeContent(this)" onmouseout="backContent()">
+        Hello World!
+    </div>
+    <!--End Task 1-->
+
+    <hr>
+
+    <!--Start Task 2-->
+    <h1>Task 2:</h1>
+    <div id="container_task2" onclick="color()"></div>
+    <!--End Task 2-->
+
+    <hr>
+
+    <!--Start Task 3-->
+    <h1>Task 3:</h1>
+    <select id="country" onchange="changeFlag()">
+        <option value="choose">Choose</option>
+        <option value="Norway">Norway</option>
+        <option value="America">America</option>
+        <option value="Spain">Spain</option>
+        <option value="England">England</option>
+    </select>
+    <img id='flag' src="https://advancepetproduct.com/wp-content/uploads/2019/04/no-image.png" height="250px" width="300px" alt="" id="Flag">
+    <!--End Task 3-->
+
+    <hr>
+
+    <!--Start Task 4-->
+    <h1>Task 4: </h1>
+    <select id="font-family" onchange="changeFontFamily()">
+        <option>Arial</option>
+        <option>Verdana</option>
+        <option>Times New Roman</option>
+    </select>
+    <select id="font-size" onchange="changeFontSize()">
+        <option>12pt</option>
+        <option>14pt</option>
+        <option>16pt</option>
+    </select>
+    <label for="italic">Italic</label>
+    <input type="checkbox" name="italic" id="italic" onchange="changeItalicfun()">
+    <label for="bold">Bold</label>
+    <input type="checkbox" name="bold" id="bold" onchange="changeBoldfun()">
+    <label for="underline">Underline</label>
+    <input type="checkbox" name="underline" id="underline" onchange="changeUnderlinefun()">
+    <textarea id="textArea">The quick brown fox jumps over the lazy dog</textarea>
+    <!--End Task 4-->
+    
+    <hr>
+    <!--Start Task 5-->
+    <h1>Task 5:</h1>
+    <form onsubmit="performInput()">
+        <label for="passwordInput">Password (min 6 characters): </label>
+        <input type="password" name="password" id="passwordInput">
+        <span id="error1"></span>
+        <label for="passwordInput2">Repeat password: </label>
+        <input type="password" name="password" id="passwordInput2">
+        <span id="error1"></span>
+        <button class="task5Submit">Submit</button>
+    </form>
+    <!--End Task 5-->
+    <hr>
+    <!--Start Task 6-->
+    <h1>Task 6:</h1>
+    <div id="main-heading">
+        <h2>What is lorem ipsum?</h2>
+        <div id="p1_show" class="show"><a href="#" onclick="showFunction1()">Show</a></div>
+        <div id="p1_text" class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veritatis, corrupti in maxime dicta, delectus praesentium amet laborum, aspernatur rerum harum autem exercitationem tempora minus pariatur quod eos ullam! Porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veritatis, corrupti in maxime dicta, delectus praesentium amet laborum, aspernatur rerum harum autem exercitationem tempora minus pariatur quod eos ullam! Porro!</p>
+            <p><a href="#" onclick="hideFunction1()">Hide</a></p>  
+        </div>
+</div>
+    <div id="main-heading">
+        <h2>Why do we use it?</h2>
+        <div id="p2_show" class="show"><a href="#" onclick="showFunction2()">Show</a></div>
+        <div id="p2_text" class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veritatis, corrupti in maxime dicta, delectus praesentium amet laborum, aspernatur rerum harum autem exercitationem tempora minus pariatur quod eos ullam! Porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veritatis, corrupti in maxime dicta, delectus praesentium amet laborum, aspernatur rerum harum autem exercitationem tempora minus pariatur quod eos ullam! Porro!.</p>
+            <p><a href="#" onclick="hideFunction2()">Hide</a></p>
+        </div>
+    </div>
+
+    <div id="main-heading">
+        <h2>Where does it come from?</h2>
+        <div id="p3_show" class="show"><a href="#" onclick="showFunction3()">Show</a></div>
+        <div id="p3_text" class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veritatis, corrupti in maxime dicta, delectus praesentium amet laborum, aspernatur rerum harum autem exercitationem tempora minus pariatur quod eos ullam! Porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veritatis, corrupti in maxime dicta, delectus praesentium amet laborum, aspernatur rerum harum autem exercitationem tempora minus pariatur quod eos ullam! Porro!
+            </p>
+            <p><a href="#" onclick="hideFunction3()">Hide</a></p>
+    </div>
+    </div>
+    <!--End Task 6-->
+</body>
+<script src="./js/app.js"></script>
+</html>

@@ -41,3 +41,4 @@ if( ((x%3==0) && (x%5==0)) || ((y%3==0) && (y%5==0)) || ((z%3==0) && (z%5==0))){
         console.log('No number of the inserted numbers is divisible by 3 and 5 in the same time');
         document.getElementById('result3').innerHTML="No number of the inserted numbers is divisible by 3 and 5 in the same time";
 }
+

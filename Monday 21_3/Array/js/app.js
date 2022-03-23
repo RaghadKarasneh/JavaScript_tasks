@@ -305,7 +305,7 @@ function removeFromArrayWhile(array,el){
 }
 let nums15= [1,2,3,8,9];
 console.log('The elemnt has been removed using for loop is= '+removeFromArray(nums15,8));
-//console.log('The elemnt has been removed using while loop is= '+removeFromArrayWhile(nums15,8));
+//console.log('The elemnt has been removed using while loop is= '+removeFromArrayWhile(nums15,1));
 
 /*Task16:
 
@@ -477,3 +477,5 @@ function evenIndexOddLength(array){
 }
 let  nameStrings= ["alex","mercer","madrasa","rashed2","emad","hala"]
 console.log(evenIndexOddLength(nameStrings));
+
+
