@@ -91,51 +91,63 @@ function changeUnderlinefun(){
     changeTextarea.style.textDecoration='underline';
 }
 /*Task 5: */
-let pass1=document.getElementById('passwordInput');
-let pass2=document.getElementById('passwordInput2');
-function performInput(){
-    if (pass1.length<6){
-        document.getElementById('error1').innerHTML='*Password must be at least 6 characters long';
-        return false;
-    }
-    if(pass1.innerHTML != pass2.innerHTML){
-        document.getElementById('error2').innerHTML=`*The two password don't match`;
-        return false;
-    }
+let btn =document.getElementById("task5Submit");
+ 
+   function checkPassword() {
+       let p1 = document.getElementById("password1");
+       let p2 = document.getElementById("password2");
+       let msg1 = document.getElementById("pass1_check");
+       let msg2 = document.getElementById("pass2_check");
+      
+       if(p1.value.length >= 6){
+           msg1.innerHTML = "Correct Password length";
+       }
+       else{
+           msg1.innerHTML="*Password must be at least 6 characters long";
+       }
+
+       if (p1.value == p2.value) {
+           msg2.innerHTML= "The two passwords match";
+           btn.style.visibility="visible";
+       }
+       else if(p1.value != p2.value && p1.value.length <6){
+           msg2.innerHTML="*The two passwords must match";
+       }
+
 }
 
 /*Task 6: */
 
 function showFunction1() {
-    document.getElementById("p1_text").style.visibility="visible";
-    document.getElementById("p1_show").style.visibility="hidden";
-    document.getElementById('main-heading').style.height="500px";
+    document.getElementById("p1_text").style.display="block";
+    document.getElementById("p1_show").style.display="none";
+    document.getElementById('main-div').style.height="324px";
    
 }
 function hideFunction1() {
-    document.getElementById("p1_text").style.visibility="hidden";
-    document.getElementById("p1_show").style.visibility="visible";
-    document.getElementById('main-heading').style.height="100px";
+    document.getElementById("p1_text").style.display="none";
+    document.getElementById("p1_show").style.display="inline-block";
+    document.getElementById('main-div').style.height="10px";
 }
 function showFunction2() {
-    document.getElementById("p2_text").style.visibility="visible";
-    document.getElementById("p2_show").style.visibility="hidden";
-    document.getElementById('main-heading').style.height="500px";
+    document.getElementById("p2_text").style.display="block";
+    document.getElementById("p2_show").style.display="none";
+    document.getElementById('main-div').style.height="324px";
 
 }
 function hideFunction2() {
-    document.getElementById("p2_text").style.visibility="hidden";
-    document.getElementById("p2_show").style.visibility="visible";
-    document.getElementById('main-heading').style.height="100px";
+    document.getElementById("p2_text").style.display="none";
+    document.getElementById("p2_show").style.dispkay="inline-blocj";
+    document.getElementById('main-div').style.height="100px";
 }
 function showFunction3() {
-    document.getElementById("p3_text").style.visibility="visible";
-    document.getElementById("p3_show").style.visibility="hidden";
-    document.getElementById('main-heading').style.height="500px";
+    document.getElementById("p3_text").style.display="block";
+    document.getElementById("p3_show").style.display="none";
+    document.getElementById('main-div').style.height="324px";
     
 }
 function hideFunction3() {
-    document.getElementById("p3_text").style.visibility="hidden";
-    document.getElementById("p3_show").style.visibility="visible";
-    document.getElementById('main-heading').style.height="100px";
+    document.getElementById("p3_text").style.display="none";
+    document.getElementById("p3_show").style.display="inline-block";
+    document.getElementById('main-div').style.height="100px";
 }

@@ -44,19 +44,24 @@ textarea{
 }
 
 /*Task 5*/
-#passwordInput,
-#passwordInput2,
+#password1,
+#password2,
 .task5Submit{
     display: block;
     margin: 20px;
 }
-#error1,
-#error2{
+#pass1_check,
+#pass2_check{
     color: red;
+    font-weight: bold;
+    margin: 20px;
+}
+#task5Submit{
+    visibility: hidden;
 }
 
 /*Task 6:*/
-#main-heading{
+#main-div{
     
     width: 400px;
     border: 1px solid grey;
@@ -64,7 +69,9 @@ textarea{
     position: relative;
     margin: 5px;
 }
-
+#main-div h2{
+    display: inline-block;
+}
 .text{
     background-color: white;
     padding: 10px;
@@ -73,17 +80,23 @@ textarea{
     color: #a9a9a9;
 }
 #p1_text{
-    visibility: hidden;
-
+    display: none;
+    width: 95%;
+    margin: 0;
 }
 #p2_text{
-    visibility: hidden;
+    display: none;
+    width: 95%;
+    margin: 0;
 }
 #p3_text{
-    visibility: hidden;
+    display: none;
+    width: 95%;
+    margin: 0;
 }
 .show{
-    position: absolute;
+    position: relative;
     right: 10px;
-    top: 20px;
+    display: inline-block;
+    margin: 20px;
 }
