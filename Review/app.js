@@ -31,3 +31,4 @@ function Arrays_sum(array1,array2){
     return newArray
 }
 console.log(Arrays_sum([1,0,2,3,4], [3,5,6,7,8,13]));
+document.write(Arrays_sum([1,0,2,3,4], [3,5,6,7,8,13]))
