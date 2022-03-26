@@ -8,8 +8,7 @@ function doubleValues(array){
     array.forEach(i => {
         newArray.push(i*2);
         i++;
-    }
-    );
+    });
     return newArray;
 }
 document.getElementById('task1_result').innerHTML=doubleValues([5,1,2,3,10]);
@@ -39,7 +38,6 @@ function showFirstAndLast(array){
     let newArray=[];
     array.forEach(i=>{
         newArray.push(i[0]+i[i.length-1]);
-  
     });
     return newArray;
 }
@@ -76,10 +74,10 @@ function vowelCount(str){
 
     splitArr.forEach(function(letter){
         if(vowels.indexOf(letter) !== -1){
-            if(obj[letter]){
-                obj[letter]++;
+            if(obj[letter]){ //check for the truthly value
+                obj[letter]++; // add it to the number already stored
             } else{
-                obj[letter] = 1;
+                obj[letter] = 1; //letter hasn't been seen before: falsy value
             }
         }
     });
