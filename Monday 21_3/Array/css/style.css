@@ -1,0 +1,51 @@
+.warning{
+    color:red
+}
+
+.result{
+    font-weight: bold;
+}
+#task1_result_error1,
+#task1_result_error2,
+#task1_result_error3,
+#task2_result,
+#task3_result1,
+#task3_result2,
+#task3_result3,
+#task4_result,
+#task5_result,
+#task6_result,
+#task7_result,
+#task8_result,
+#task9_result1,
+#task9_result2,
+#task10_result,
+#task11_result,
+#task12_result,
+#task13_result1,
+#task13_result2,
+#task14_result1,
+#task14_result2,
+#task15_result1,
+#task15_result2,
+#task16_result1,
+#task16_result2,
+#task17_result1,
+#task17_result2,
+#task18_result1,
+#task18_result2,
+#task19_result1,
+#task19_result2,
+#task20_result1,
+#task20_result2,
+#task21_result1,
+#task21_result2,
+#task22_result1,
+#task22_result2{
+    color: red;
+    font-size: 20px;
+    margin: 10px 0;
+}
+hr{
+    margin: 50px 20px;
+}

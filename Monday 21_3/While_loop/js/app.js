@@ -6,30 +6,27 @@ that takes a single parameter n,
 and return the subtraction of all
 starting from n to 0
 */
-function subtract(n){
-    let m =n;
-    for(let i=n-1; i > 0 ; --i){
-      m =m-i;
+// function subtract(n){
+//     let m =n;
+//     for(let i=n-1; i > 0 ; --i){
+//       m =m-i;
     
         
 
-    }
-     return m
-}
+//     }
+//      return m
+// }
 function subtract(num){
-    let sub=0;
-    let i
-    while(num){
-       
-            sub=num-(num-1);
-            console.log(sub);
-
-            num--;
+    let sub=num;
+    let i=num-1;
+    while(i>0){
+            sub=sub-i;
+            i--;
         }
     
     return sub;
 }
-document.getElementById('task1_result').innerHTML=subtract(5);
+document.getElementById('task1_result').innerHTML=subtract(9);
 
 /*TASK2:
 Create a function called factorial
@@ -100,7 +97,7 @@ function repeatStr2(string,string_num){
         }
         return lastString
     }
-document.getElementById('task5_result').innerHTML=repeatStr2("to",'cccc');
+document.getElementById('task5_result').innerHTML=repeatStr2("ro",'cccc');
 
 /*TASK6:
 Create a function called multiOf

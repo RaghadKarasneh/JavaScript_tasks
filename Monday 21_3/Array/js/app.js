@@ -1,5 +1,30 @@
 'use strict';
 
+//TASK1:
+
+console.log('***TASK1 result:');
+ //[ 1,7  9  45, ]
+console.log('The first array correction is: [1,7,9,45]');
+document.getElementById('task1_result_error1').innerHTML='[1,7,9,45]';
+
+ //["Str" "alex","moh"
+ console.log('The first array correction is: ["Str" "alex","moh"]');
+ document.getElementById('task1_result_error2').innerHTML='["Str" "alex","moh"]';
+ //'the’, ‘fox' 'over' lazy, 'dog',  ]
+ console.log(`The third array correction is: ['the', 'fox', 'over', 'lazy', 'dog',  ]`);
+ document.getElementById('task1_result_error3').innerHTML=`['the', 'fox', 'over', 'lazy', 'dog',  ]`;
+
+//**********************************************************************************************************************************
+
+ /*TASK2:
+What is the index of "Banana”, Tomato"
+var fruits=["Tomato","Banana","Watermelon"]
+ */
+console.log('***TASK2 result:');
+console.log('The index of "Banana" is: 1');
+document.getElementById('task2_result').innerHTML=`1`;
+
+//**********************************************************************************************************************************
 /* Task3: 
 
 Create an array represents your:
@@ -11,13 +36,17 @@ Create an array represents your:
 console.log('Task 3 result: ');
 let favoriteFood =['Fish', 'Rice', 'Meat', 'Hummus', 'Tabouleh'];
 console.log('My favorite food are: ' +favoriteFood);
+document.getElementById('task3_result1').innerHTML=favoriteFood;
 
 let favoriteSports=['Swimming', 'Walking', 'Spinning'];
 console.log('My favorite sports are: ' + favoriteSports);
+document.getElementById('task3_result2').innerHTML=favoriteSports;
 
-let favoriteMovies= ['The Conjuring', 'Raid Along', 'The Invisible Man', 'The Purge' ];
+let favoriteMovies= ['The Conjuring', 'Raid Along', 'The Invisible Man', 'The Purge'];
 console.log('My favorite movies are: ' + favoriteMovies);
+document.getElementById('task3_result3').innerHTML=favoriteMovies;
 
+//**********************************************************************************************************************************
 /*Task4: 
 
 Create a function called firstOfArray
@@ -32,11 +61,12 @@ console.log('Task 4 result: ');
 function firstOfArray(array){
     return array[0];
 }
-let arr=[1,4,5];
-let arr2=['t', 'u', 'g', 'x'];
-console.log(firstOfArray(arr));
-console.log(firstOfArray(arr2));
 
+let arr2=['t', 'u', 'g', 'x'];
+console.log(firstOfArray(arr2));
+document.getElementById('task4_result').innerHTML=firstOfArray(arr2);
+
+//**********************************************************************************************************************************
 /*
 Task5:
 
@@ -51,11 +81,12 @@ console.log('Task 5 result: ');
 function lastOfArray(array){
     return array[array.length-1];
 }
-let arr3=[1,4,5];
-let arr4=['t', 'u', 'g', 'x'];
-console.log(lastOfArray(arr3));
-console.log(lastOfArray(arr4));
 
+let arr4=['t', 'u', 'g', 'x'];
+console.log(lastOfArray(arr4));
+document.getElementById('task5_result').innerHTML=lastOfArray(arr4);
+
+//**********************************************************************************************************************************
 /*Task 6:
 
 Using console make this array to be like this one (push, unshift, shift, pop)
@@ -74,6 +105,9 @@ arr5.unshift(3);
 arr5.unshift(1);
 arr5.push(10);
 console.log(arr5);
+document.getElementById('task6_result').innerHTML=arr5;
+
+//**********************************************************************************************************************************
 
 /*Task 7:
 
@@ -89,6 +123,9 @@ arr6.unshift(5);
 arr6.push(-7);
 arr6.push(3.5);
 console.log(arr6);
+document.getElementById('task7_result').innerHTML=arr6;
+
+//**********************************************************************************************************************************
 
 /*Task8: 
 
@@ -112,13 +149,13 @@ function middleOfArray(array){
         return array [Math.floor(array.length/2)];
     }
 }
-let arr7= [1,4,5];
 let arr8= ["t","u","g","x"];
-console.log(middleOfArray(arr7));
 console.log(middleOfArray(arr8));
+document.getElementById('task8_result').innerHTML=middleOfArray(arr8);
 
-/*
-Task9:
+//**********************************************************************************************************************************
+
+/*Task9:
 
 Using assignment operator (=)
 make the animals array have these animals
@@ -145,7 +182,9 @@ nums[5]=44;
 
 console.log('animals array=> '+ animals);
 console.log('nums array=> '+nums);
-
+document.getElementById('task9_result1').innerHTML=animals;
+document.getElementById('task9_result2').innerHTML=nums;
+//**********************************************************************************************************************************
 /*
 Task10:
 
@@ -165,7 +204,9 @@ function indexOfArray(array,index){
 }
 let arr9=[1,2,3,8,9];
 console.log(indexOfArray(arr9,1));
+document.getElementById('task10_result').innerHTML=indexOfArray(arr9,1);
 
+//**********************************************************************************************************************************
 /*
 Task11:
 
@@ -185,7 +226,10 @@ function arrayExceptLast(array){
   return arr
 }
 let nums11= [1,2,3,8,9];
-console.log( arrayExceptLast(nums11));
+console.log(arrayExceptLast(nums11));
+document.getElementById('task11_result').innerHTML=arrayExceptLast(nums11);
+
+//**********************************************************************************************************************************
 
 /* Task12:
 
@@ -203,11 +247,12 @@ function addToEnd(array,value){
 }
 let nums12= [1,2,3,8,9];
 console.log(addToEnd(nums12,55));
+document.getElementById('task12_result').innerHTML=addToEnd(nums12,55);
 
+//**********************************************************************************************************************************
 // all the exercises below should solved 2 times: 1- for loop 2- while lopp
 
-/*
-Task13:
+/*Task13:
 
 Create a function called sumArray
 that accept an array
@@ -236,8 +281,11 @@ function sumArrayWhile(array){
 }
 let nums13= [1,2,3,8,9];
 console.log('The summation using for loop is= '+sumArray(nums13));
-//console.log('The summation using while loop is= '+sumArrayWhile(nums13));
+console.log('The summation using while loop is= '+sumArrayWhile(nums13));
+document.getElementById('task13_result1').innerHTML=sumArray(nums13);
+document.getElementById('task13_result2').innerHTML=sumArrayWhile(nums13);
 
+//**********************************************************************************************************************************
 /*
 Task14:
 
@@ -272,7 +320,11 @@ function minInArrayWhile(array){
 }
 let nums14= [1,2,3,8,9];
 console.log('The minimum value in array using for loop is= '+minInArray(nums14));
-//console.log('The minimum value in array using while loop is= '+minInArrayWhile(nums14));
+console.log('The minimum value in array using while loop is= '+minInArrayWhile(nums14));
+document.getElementById('task14_result1').innerHTML=minInArray(nums14);
+document.getElementById('task14_result2').innerHTML=minInArrayWhile(nums14);
+
+//**********************************************************************************************************************************
 
 /*Task15:
 
@@ -300,12 +352,18 @@ function removeFromArrayWhile(array,el){
         if(array[i]===el){
             array.splice(i,1);
         }
+        i++;
     }
     return array;
 }
 let nums15= [1,2,3,8,9];
+let nums15_2= [1,2,3,8,9];
 console.log('The elemnt has been removed using for loop is= '+removeFromArray(nums15,8));
-//console.log('The elemnt has been removed using while loop is= '+removeFromArrayWhile(nums15,1));
+console.log('The elemnt has been removed using while loop is= '+removeFromArrayWhile(nums15_2,8));
+document.getElementById('task15_result1').innerHTML=removeFromArray(nums15,8);
+document.getElementById('task15_result2').innerHTML=removeFromArrayWhile(nums15_2,8);
+
+//**********************************************************************************************************************************
 
 /*Task16:
 
@@ -335,11 +393,16 @@ function oddArrayWhile(array){
         if(array[i]%2!==0){
             newArray.push(array[i]);
         }
+        i++;
     }
     return newArray;
 }
 console.log('The odd elemnt in this array using for loop are= '+oddArray(nums16,8));
-//console.log('The odd elemnt in this array using while loop are= '+oddArrayWhile(nums16,8));
+console.log('The odd elemnt in this array using while loop are= '+oddArrayWhile(nums16,8));
+document.getElementById('task16_result1').innerHTML=oddArray(nums16,8);
+document.getElementById('task16_result2').innerHTML=oddArrayWhile(nums16,8);
+
+//**********************************************************************************************************************************
 
 /*Task17:
 
@@ -366,13 +429,20 @@ function aveArrayWhile(array){
     let i=0;
     while(i<array.length){
         sum=sum+array[i];
+        i++;
     }
     return sum/(array.length);
 }
 
 let nums17= [1,2,3,8,9,77];
+console.log('**The result with for loop is: ');
 console.log('The Avareg of this array using for loop is= '+aveArray(nums17));
-//console.log('The Avareg of this array using while loop is= '+aveArrayWhile(nums17));
+console.log('**The result with while loop is: ');
+console.log('The Avareg of this array using while loop is= '+aveArrayWhile(nums17));
+document.getElementById('task17_result1').innerHTML=aveArrayWhile(nums17);
+document.getElementById('task17_result2').innerHTML=aveArrayWhile(nums17);
+
+//**********************************************************************************************************************************
 
 /*Task18:
 
@@ -400,24 +470,30 @@ function shorterInArray(array) {
     return shortest;
 }
 /*2- With While loop: */
-function shortInArrayWhile(array){
+function shorterInArrayWhile(array){
     let shortLength= Infinity;
     let shortest="";
     let i=0;
     if(array.length>0){
         while ( i < array.length){
-            if (typeof array[i]==='string' && array[i].length <shortLength){
-            shortest=array[i];
-            shortLength= array[i].length;
+            if (typeof array[i] === 'string' && array[i].length < shortLength) {
+                shortest = array[i];
+                shortLength = array[i].length; 
             }
          i++;
         }
     }
-    
+    return shortest;
 }
 let strings= ["alex","mercer","madrasa","rashed2","emad","hala"];
-console.log('The shortest string in this array using for loop is: '+shorterInArray(strings));
-//console.log('The shortest string in this array using for loop is: '+shorterInArrayWhile(strings));
+console.log('The result with for loop is: ');
+console.log(shorterInArray(strings));
+console.log('The result with while loop is: ');
+console.log(shorterInArrayWhile(strings));
+document.getElementById('task18_result1').innerHTML=shorterInArray(strings);
+document.getElementById('task18_result2').innerHTML=shorterInArrayWhile(strings);
+
+//**********************************************************************************************************************************
 
 /*Task19:
 
@@ -454,11 +530,16 @@ function repeatCharWhile(str,char){
     return sum;
 }
 let stringName="alex mercer madrasa rashed2 emad hala";
+console.log('The result with for loop is: ');
 console.log(repeatChar(stringName,'a'));
-//console.log(repeatChar(stringNameWhile,'a'));
+console.log('The result with while loop is: ');
+console.log(repeatCharWhile(stringName,'a'));
+document.getElementById('task19_result1').innerHTML=repeatChar(stringName,'a');
+document.getElementById('task19_result2').innerHTML=repeatCharWhile(stringName,'a');
 
-/*
-Task20:
+//**********************************************************************************************************************************
+
+/*Task20:
 Create a function called evenIndexOddLength
 that accept an array of strings
 and return a new array that have the string with odd length in even index
@@ -469,13 +550,102 @@ Ex: evenIndexOddLength(strings) => ["madrasa"]
 function evenIndexOddLength(array){
     let newArray=[];
     for(let i=0; i<array.length;i++){
-    if(typeof(array)==='string' && i%2==0 && array[i].length%2 !=0){
-        newArray=array[i];
+    if(array[i].length%2 !=0){
+        newArray.push(array[i]);
     }
   }
   return newArray;
 }
-let  nameStrings= ["alex","mercer","madrasa","rashed2","emad","hala"]
+function evenIndexOddLengthWhile(array){
+    let newArray=[];
+    let i=0;
+    while(i<array.length){
+        if(array[i].length%2 !=0){
+            newArray.push(array[i]);
+        }
+        i++
+    }
+    return newArray;
+}
+let  nameStrings= ["alex","mercer","madrasa","rashed2","emad","hala"];
+console.log('The result with for loop is: ');
 console.log(evenIndexOddLength(nameStrings));
+console.log('The result with while loop is: ');
+console.log(evenIndexOddLengthWhile(nameStrings));
+document.getElementById('task20_result1').innerHTML=evenIndexOddLength(nameStrings);
+document.getElementById('task20_result2').innerHTML=evenIndexOddLengthWhile(nameStrings);
 
+//**********************************************************************************************************************************
 
+/*TASK21: Create a function called powerElementIndex
+that accept an array of number
+and return a new array that have the elemnt power by the index of it self
+
+var nums= [44, 5, 4, 3, 2, 10]
+Ex: powerElementIndex(nums) => [0, 5, 16, 27, 16, 100000]*/
+
+function powerElementIndex(array) {
+    let newArray=[];
+    let newIndex;
+    for(let i=0;i<array.length;i++){
+        newIndex=Math.pow(array[i],i);
+        newArray.push(newIndex);
+    }
+    return newArray;
+}
+function powerElementIndexWhile(array){
+    let newArray=[];
+    let newIndex;
+    let i=0;
+    while(i<array.length){
+        newIndex=Math.pow(array[i],i);
+        newArray.push(newIndex);
+        i++;
+    }
+    return newArray;
+}
+let nums21=[44, 5, 4, 3, 2, 10];
+console.log('The result with for loop is: ');
+console.log(powerElementIndex(nums21));
+console.log('The result with while loop is: ');
+console.log(powerElementIndexWhile(nums21));
+document.getElementById('task21_result1').innerHTML=powerElementIndex(nums21);
+document.getElementById('task21_result2').innerHTML=powerElementIndexWhile(nums21);
+
+//**********************************************************************************************************************************
+
+/*TASK22:
+Create a function called evenNumberEvenIndex
+that accept an array of nums
+and return a new array that have the even number in even index
+*/
+function evenNumberEvenIndex(array){
+    let newArray=[];
+    for (let i=0; i<array.length;i++){
+        if((i%2==0)&&(array[i]%2==0)){
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
+function evenNumberEvenIndexWhile(array){
+    let newArray=[];
+    let i=0;
+    while (i<array.length){
+        if((i%2==0)&&(array[i]%2==0)){
+            newArray.push(array[i]);
+        }
+        i++;
+    }
+    return newArray;
+}
+let nums22= [5,2,2,1,8,66,55,77,34,9,55,1]
+console.log('The result with for loop is: ');
+console.log(evenNumberEvenIndex(nums22));
+console.log('The result with while loop is: ');
+console.log(evenNumberEvenIndexWhile(nums22));
+
+document.getElementById('task22_result1').innerHTML=evenNumberEvenIndex(nums22);
+document.getElementById('task22_result2').innerHTML=evenNumberEvenIndexWhile(nums22);
+
+//**********************************************************************************************************************************
