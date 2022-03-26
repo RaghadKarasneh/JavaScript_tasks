@@ -6,16 +6,6 @@ that takes a single parameter n,
 and return the subtraction of all
 starting from n to 0
 */
-// function subtract(n){
-//     let m =n;
-//     for(let i=n-1; i > 0 ; --i){
-//       m =m-i;
-    
-        
-
-//     }
-//      return m
-// }
 function subtract(num){
     let sub=num;
     let i=num-1;
@@ -27,6 +17,8 @@ function subtract(num){
     return sub;
 }
 document.getElementById('task1_result').innerHTML=subtract(9);
+
+//**********************************************************************************************************************************
 
 /*TASK2:
 Create a function called factorial
@@ -43,6 +35,8 @@ function factorial(num){
 }
 document.getElementById('task2_result').innerHTML=factorial(4);
 
+//**********************************************************************************************************************************
+
 /*TASK3:
 Create a function called repeatStr
 that takes 2 parameters string and number,
@@ -50,9 +44,8 @@ and return the string number time with space
 Important: the continue condition should be [somthing !== 0]
 */
 function repeatStr(string,number){
-    let mutiple=1;
     let lastString='';
-    while (number>0){
+    while (number!== 0){
         lastString=lastString+string;
         lastString=lastString+ ' '
         number--;
@@ -60,6 +53,8 @@ function repeatStr(string,number){
     return lastString
 }
 document.getElementById('task3_result').innerHTML=repeatStr("to",3);
+
+//**********************************************************************************************************************************
 
 /*TASK4:
 Create a function called sum2
@@ -82,6 +77,8 @@ function sum2(num1,num2){
 }
 document.getElementById('task4_result').innerHTML=sum2(3, 6);
 
+//**********************************************************************************************************************************
+
 /*TASK5:
 Create a function called repeatStr2
 that takes 2 string parameters,
@@ -91,13 +88,15 @@ and return the first string number time
 function repeatStr2(string,string_num){
         let lastString='';
         let num=string_num.length;
-        while (num){
+        while (num !==0){
             lastString=lastString+' '+string;
             num--;
         }
         return lastString
     }
 document.getElementById('task5_result').innerHTML=repeatStr2("ro",'cccc');
+
+//**********************************************************************************************************************************
 
 /*TASK6:
 Create a function called multiOf
@@ -117,6 +116,8 @@ function multiOf(num1,num2,num3){
 }
 document.getElementById('task6_result').innerHTML=multiOf(4,10,3);
 
+//**********************************************************************************************************************************
+
 /*TASK7:
  Create a function called muti2
 that take two parameter
@@ -133,6 +134,8 @@ function muti2(num1,num2){
 }
 document.getElementById('task7_result').innerHTML=muti2(3, 6);
 
+//**********************************************************************************************************************************
+
 /*TASK8:
 Create a function called numberBetweenUs
 that take 2 parameters
@@ -147,6 +150,8 @@ function numberBetweenUs(num1,num2){
      return `"${array.join(', ')}"`;
  } 
 document.getElementById('task8_result').innerHTML=numberBetweenUs(2,8);
+
+//**********************************************************************************************************************************
 
 /*TASK9:
 Write a function called countDown
@@ -169,6 +174,8 @@ function countDown(num){
 }
 document.getElementById('task9_result').innerHTML=countDown(7);
 
+//**********************************************************************************************************************************
+
 /*TASK10:
 Write a function called multiplication2
 that takes two parameters
@@ -184,6 +191,8 @@ function multiplication2(num1,num2){
 }
 document.getElementById('task10_result').innerHTML=multiplication2(5,4);
 
+//**********************************************************************************************************************************
+
 /*TASK11:
 Write a function called mod2
 that takes two parameters
@@ -192,12 +201,14 @@ and return the module of them
 function mod2(num1,num2){
     let result;
     while(num2){
-        result=num1%num2;
+        result=(num1-num2 * parseInt(num1 / num2));
         break;
     }
     return result;
 }
 document.getElementById('task11_result').innerHTML=mod2(7,4);
+
+//**********************************************************************************************************************************
 
 /*TASK12:
 Write a function called repeatChar

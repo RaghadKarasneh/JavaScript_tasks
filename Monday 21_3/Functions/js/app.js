@@ -15,6 +15,8 @@ function tellFortune(job_title, geographic_loc, partner_name,child_num){
 //console.log(tellFortune('software engineer', 'Jordan', 'Alice', 3));
 document.getElementById('task1_result').innerHTML=tellFortune('software engineer', 'Jordan', 'Alice', 3);
 
+//**********************************************************************************************************************************
+
 /*TASK2:
 
 Write a function named calculateDogAge that:
@@ -29,8 +31,9 @@ function calculateDogAge(age){
     let  puppy_age=age*7;
     return `Your doggie is ${puppy_age} years old in dog years!`;
 }
-//console.log(calculateDogAge(1));
 document.getElementById('task2_result').innerHTML=calculateDogAge(1);
+
+//**********************************************************************************************************************************
 
 /*TASK3:
 
@@ -46,6 +49,9 @@ function calculateSupply(age, amount_per_day){
     return `You will need ${tea} cups of tea to last you until the ripe old age of 100`;
 }
 document.getElementById('task3_result').innerHTML=calculateSupply(30, 3);
+
+//**********************************************************************************************************************************
+
 /*TASK4:
 
  Write a function called greet that:
@@ -58,6 +64,7 @@ function greet(name){
 }
 document.getElementById('task4_result').innerHTML=greet('Adam');
 
+//**********************************************************************************************************************************
 
 //TASK6:
 /*func double1(x {
@@ -75,6 +82,8 @@ function (x) double3 {
 */
 document.getElementById('task6_result_error3').innerHTML="function double3(x) {return 2 * x ;}";
 
+//**********************************************************************************************************************************
+
 /*TASK7:
 Write a function called cube that:
 accept 1 parameter and calculate the cube of this number
@@ -83,6 +92,8 @@ function cube(num){
     return num*num*num;
 }
 document.getElementById('task7_result').innerHTML=cube(4);
+
+//**********************************************************************************************************************************
 
 /*TASK8:
 Write a function called multiply that:
@@ -93,6 +104,8 @@ function multiply(num1,num2){
     return num1*num2;
 }
 document.getElementById('task8_result').innerHTML=multiply(3,4);
+
+//**********************************************************************************************************************************
 
 /*TASK9:
 Write a function called canIGetADrivingLicense that:
@@ -113,6 +126,8 @@ function canIGetADrivingLicense(age){
 }
 document.getElementById('task9_result').innerHTML=canIGetADrivingLicense(17);
 
+//**********************************************************************************************************************************
+
 /*TASK10:
 Write a function called sameLength
 that accepts two strings as arguments,
@@ -128,6 +143,8 @@ function sameLength(string1,string2){
 }
 document.getElementById('task10_result').innerHTML=sameLength("tree","clue");
 
+//**********************************************************************************************************************************
+
 /*TASK11:
 Write a function called largerNubmer
 that accept two numbers as arguments,
@@ -142,6 +159,8 @@ function largerNubmer(num1,num2){
     }
 }
 document.getElementById('task11_result').innerHTML=largerNubmer(5,6);
+
+//**********************************************************************************************************************************
 
 /*TASK12:
 Write a function called smallerNubmer
@@ -162,6 +181,8 @@ function smallerNubmer(num1,num2,num3){
     return smaller;
 }
 document.getElementById('task12_result').innerHTML=smallerNubmer(5,99,3);
+
+//**********************************************************************************************************************************
 
 /* TASK13:
 Write a function called shorterString
@@ -192,8 +213,9 @@ function shorterString(string1,string2,string3,string4,string5){
     }
     //I use (<=) to find the FIRST shorter string
 }
-//console.log(shorterString("air","tr","car","by","github"));
 document.getElementById('task13_result').innerHTML=shorterString("by","tr","car","air","github");
+
+//**********************************************************************************************************************************
 
 /*Task14:
 Write a function called longerString
@@ -221,6 +243,8 @@ function longerString(string1, string2, string3, string4){
 }
 document.getElementById('task14_result').innerHTML=longerString("air","school","car","github");
 
+//**********************************************************************************************************************************
+
 /*TASK15:
 Write a function called isEven
 that accept 1 argument as a number,
@@ -237,6 +261,8 @@ function isEven(num){
 }
 document.getElementById('task15_result').innerHTML=isEven(6);
 
+//**********************************************************************************************************************************
+
 /*TASK16:
 Write a function called isOdd
 that accept 1 argument as a number,
@@ -251,6 +277,8 @@ function isOdd(num){
         return false;}
 }
 document.getElementById('task16_result').innerHTML=isOdd(3);
+
+//**********************************************************************************************************************************
 
 /*TASK17:
 Write a function called positive
@@ -267,6 +295,8 @@ function positive(num){
 }
 document.getElementById('task17_result').innerHTML=positive(-5);
 
+//**********************************************************************************************************************************
+
 /*TASK18:
 Write a function called fullName
 that accept two parameters, firstName and lastName,
@@ -277,6 +307,8 @@ function fullName(first_name,last_name){
     return first_name + ' ' + last_name;
 }
 document.getElementById('task18_result').innerHTML=fullName("Adam","McCallen");
+
+//**********************************************************************************************************************************
 
 /*TASK19:
 Write a function called average
@@ -289,6 +321,8 @@ function average(num1,num2,num3,num4,num5){
 }
 document.getElementById('task19_result').innerHTML=average(5,7,9,3,5);
 
+//**********************************************************************************************************************************
+
 /*TASK20:
 Write a function called randomNumber
 that didnt takes any parameter
@@ -299,6 +333,8 @@ function randomNumber(){
 }
 document.getElementById('task20_result').innerHTML=randomNumber();
 
+//**********************************************************************************************************************************
+
 /*TASK21:
 Write a function called randomBetweenNumbers
 that takes 2 parameters
@@ -308,6 +344,8 @@ function randomBetweenNumbers(num1,num2){
     return Math.floor(Math.random()* (num2-num1)+num1)
 }
 document.getElementById('task21_result').innerHTML=randomBetweenNumbers(3,100);
+
+//**********************************************************************************************************************************
 
 /*TASK22:
 Write a function called scoreInUniversty
@@ -339,6 +377,8 @@ function scoreInUniversty(num){
 }
 document.getElementById('task22_result').innerHTML=scoreInUniversty(3);
 
+//**********************************************************************************************************************************
+
 /*TASK23:
 Write a function called counter
 that will returns a number bigger
@@ -353,6 +393,8 @@ document.getElementById('task23_result_1').innerHTML=counter();
 document.getElementById('task23_result_2').innerHTML=counter();
 document.getElementById('task23_result_3').innerHTML=counter();
 document.getElementById('task23_result_4').innerHTML=counter();
+
+//**********************************************************************************************************************************
 
 /*TASK24:
 Write a function called resetCounter
