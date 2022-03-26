@@ -1,0 +1,52 @@
+.warning{
+    color:red
+}
+
+.result{
+    font-weight: bold;
+}
+#task1_result,
+#task2_result,
+#task3_result,
+#task4_result,
+#task5_result,
+#task6_result_error1,
+#task6_result_error2,
+#task6_result_error3,
+#task7_result,
+#task8_result,
+#task9_result,
+#task10_result,
+#task11_result,
+#task12_result,
+#task13_result,
+#task14_result,
+#task15_result,
+#task16_result,
+#task17_result,
+#task18_result,
+#task19_result,
+#task20_result,
+#task21_result,
+#task22_result,
+#task23_result,
+#task24_result,
+#task23_result_1,
+#task23_result_2,
+#task23_result_3,
+#task23_result_4,
+#task24_result_1,
+#task24_result_2,
+#task24_result_3,
+#task24_result_4{
+    color: red;
+    font-size: 20px;
+}
+hr{
+    margin: 50px 20px;
+}
+#task6_result_error1,
+#task6_result_error2,
+#task6_result_error3{
+    margin:20px
+}

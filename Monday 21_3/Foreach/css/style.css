@@ -1,0 +1,19 @@
+.warning{
+    color:red
+}
+
+.result{
+    font-weight: bold;
+}
+#task1_result,
+#task2_result,
+#task3_result,
+#task4_result,
+#task5_result
+{
+    color: red;
+    font-size: 20px;
+}
+hr{
+    margin: 50px 20px;
+}

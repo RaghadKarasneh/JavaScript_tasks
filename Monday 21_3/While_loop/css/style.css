@@ -1,0 +1,30 @@
+.warning{
+    color:red
+}
+
+.result{
+    font-weight: bold;
+}
+#task1_result,
+#task2_result,
+#task3_result,
+#task4_result,
+#task5_result,
+#task6_result,
+#task7_result,
+#task8_result,
+#task9_result,
+#task10_result,
+#task11_result,
+#task12_result{
+    color: red;
+    font-size: 20px;
+}
+hr{
+    margin: 50px 20px;
+}
+#task6_result_error1,
+#task6_result_error2,
+#task6_result_error3{
+    margin:20px
+}
