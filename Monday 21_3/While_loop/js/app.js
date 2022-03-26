@@ -6,8 +6,19 @@ that takes a single parameter n,
 and return the subtraction of all
 starting from n to 0
 */
+function subtract(n){
+    let m =n;
+    for(let i=n-1; i > 0 ; --i){
+      m =m-i;
+    
+        
+
+    }
+     return m
+}
 function subtract(num){
     let sub=0;
+    let i
     while(num){
        
             sub=num-(num-1);
