@@ -1,5 +1,6 @@
 .warning{
-    color:red
+    color:red;
+    margin: 20px 0 20px;
 }
 
 .result{
@@ -9,8 +10,7 @@
 #task2_result,
 #task3_result,
 #task4_result,
-#task5_result
-{
+#task5_result{
     color: red;
     font-size: 20px;
 }

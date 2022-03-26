@@ -39,6 +39,7 @@ function showFirstAndLast(array){
     });
     return newArray;
 }
+console.log('Task 3 result is: '+ showFirstAndLast(['colt','matt', 'tim', 'udemy']));
 document.getElementById('task3_result').innerHTML=showFirstAndLast(['colt','matt', 'tim', 'udemy']);
 
 /*TASK4:
@@ -51,14 +52,15 @@ function addKeyAndValue(array,key,value){
     });
     return array;
 }
+console.log('Task 5 result is: ');
 console.log(addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'title', 'instructor') );
-document.getElementById('task3_result').innerHTML=addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'title', 'instructor') ;
+document.getElementById('task4_result').innerHTML=addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'title', 'instructor') ;
 
 /*TASK5:
  Write a function called vowelCount which accepts a string and returns an object with the keys as the vowel and the 
  values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count 
 */
-function vowelCount(str){
+/*function vowelCount(str){
 
     var splitArr = str.toLowerCase().split("");
     var obj = {};
@@ -74,6 +76,23 @@ function vowelCount(str){
         }
     });
     return obj;
-}
+}*/
+function vowelCount(str){
+    var splitArr = str.toLowerCase().split("");
+    var obj = {};
+    var vowels = "aeiou";
 
+    splitArr.forEach(function(letter){
+        if(vowels.indexOf(letter) !== -1){
+            if(obj[letter]){
+                obj[letter]++;
+            } else{
+                obj[letter] = 1;
+            }
+        }
+    });
+    return obj;
+}
+console.log('Task 5 result is: ');
 console.log(vowelCount('Elie'));
+document.getElementById('task5_result').innerHTML=vowelCount('Elie');
