@@ -9,25 +9,42 @@ Expected Output:
 
 
 function Arrays_sum(array1,array2){
-        let newArray=[];
-        let indexCount=0;
+    let newArray=[];
+    let indexCount=0;
+
+/************ The First Solution  ************/
+    while(indexCount<array1.length && indexCount<array2.length){ // to sum arrays index values
+        newArray.push(array1[indexCount]+array2[indexCount]);
+        indexCount ++;
+    }
+    if (indexCount === array1.length){ //to check that I add all array2 index values 
+        for (let i=indexCount; i<array2.length;i++){
+       
+            newArray.push(array2[i]);
+        }
+    }
+    if (indexCount === array2.length){ //to check that I add all array1 index values 
+        for (let i=indexCount; i<array1.length;i++){
+       
+            newArray.push(array1[i]);
+        }
+    }
     
-        while(indexCount<array1.length && indexCount<array2.length){ // to sum arrays index values
-            newArray.push(array1[indexCount]+array2[indexCount]);
-            indexCount ++;
-        }
-        if (indexCount === array1.length){ //to check that I add all array2 index values 
-            for (let i=indexCount; i<array2.length;i++){
-           
-                newArray.push(array2[i]);
-            }
-        }
-        if (indexCount === array2.length){ //to check that I add all array1 index values 
-            for (let i=indexCount; i<array1.length;i++){
-           
-                newArray.push(array1[i]);
-            }
-        }
+    return newArray}
         
-        return newArray}
-console.log(Arrays_sum([1,0,2,3,4,5,6,7],[3,5,6,7,8,13]));
+/************ The Second Solution  ************/
+       /* 
+        for (let i=0;i<array1.length;i++){
+            indexCount=i;
+            if (i<array1.length && i<array2.length){
+                newArray.push(array1[i]+array2[i]);
+            }
+        
+        if(array2.length>=array1.length){
+            newArray.push(array2[indexCount]);
+        }
+       else if(array2.length<array1.length)
+        newArray.push(array1[indexCount]);}
+        return newArray}*/
+        
+console.log(Arrays_sum([1,0,2,3,4,5],[3,5,6,7,8,13]));
