@@ -46,5 +46,6 @@ function Arrays_sum(array1,array2){
        else if(array2.length<array1.length)
         newArray.push(array1[indexCount]);}
         return newArray}*/
-        
+
 console.log(Arrays_sum([1,0,2,3,4,5],[3,5,6,7,8,13]));
+document.write(Arrays_sum([1,0,2,3,4,5],[3,5,6,7,8,13]))
