@@ -1,20 +1,21 @@
 'use strict';
 
 let formInfo=document.getElementById('mobForm');
-let table=document.getElementById('tableCon');
+let table=document.getElementById('boadTa');
+
 let cusInfo=[];
 
-function localStorage(){
+function localStorageX(){
     let array=JSON.stringify(cusInfo);
     localStorage.setItem('data',array);
 }
 function callFromLocalStorage(){
-    // let obj=localStorage.getItem("data");
-    // let newArray=JSON.parse(obj);
-    // if (newArray !==null){
-    //   cusInfo= newArray;
-    // }
-    // renderInfo();
+    let obj=localStorage.getItem("data");
+    let newArray=JSON.parse(obj);
+    if (newArray !==null){
+      cusInfo= newArray;
+    }
+    renderInfo();
 }
 
 callFromLocalStorage()
@@ -26,7 +27,7 @@ function mobileForm(useName, typeNameD){
     this.usedOrNot=usedOrNot();
     cusInfo.push(this);
     renderInfo();
-    callFromLocalStorage();
+   localStorageX();
     console.log(cusInfo);
 }
 function price(){
@@ -48,13 +49,14 @@ function handleSubmit(e) {
 }
 handleSubmit();
 function renderInfo(){
-    let row=document.createElement('tr');
-    let cell1=document.createElement('td');
-    let cell2=document.createElement('td');
-    let cell3=document.createElement('td');
-    let cell4=document.createElement('td');
+    table.textContent='';
     
     for(let i=0;i<cusInfo.length;i++){
+        let row=document.createElement('tr');
+        let cell1=document.createElement('td');
+        let cell2=document.createElement('td');
+        let cell3=document.createElement('td');
+        let cell4=document.createElement('td');
         /*Show in HTML page */
         table.appendChild(row);
         row.appendChild(cell1);
