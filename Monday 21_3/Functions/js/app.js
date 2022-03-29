@@ -404,7 +404,7 @@ a string say that the counter reset
 */
 function resetCounter(){
     let countVal=count;
-     count=0;
+    count=0;
     return `${countVal} and the counter reset now`;
 }
 document.getElementById('task24_result_1').innerHTML=resetCounter();

@@ -85,6 +85,10 @@ document.getElementById('task5_result').innerHTML=longestName(persons);
 //TASK6 is the same of TASK5
 
 //TASK7:
+/*Create a function called repeatWord
+that accept a string
+and return an object that represents how many times each word repeat */
+
 function repeatWord(string){
     let subString=string.toLowerCase().split(' '); // To count Uppercase and Lowercase
     let obj={}; //To store the result
@@ -124,32 +128,36 @@ document.getElementById('task8_result').innerHTML= repeatChar("mamababatetacedo"
 function selectFromObject(object,array){
     let obj={};
     for(let i=0;i<array.length;i++){
-        if(Object.keys[object[i]]==array[i]){
-            return object[i];
+        if(Object.keys(object,array)==array[i]){
+            console.log(object);
+             object[array[i]]=object[array[i]];
         }
     }
+    return object
 }
-console.log('Task9 result is: '+selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd']));
+console.log('Task9 result:')
+console.log(selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd']));
 document.getElementById('task9_result').innerHTML=selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd']);
 
 //TASK10:
 function objectToArray(object){
-    let array=[]
-    for (let i in object){ //I used this type of for loop to access the properties of the object
-        array.push(i, object[i]); //i: property name, object[i]: property value
-    }
+    let keys=Object.keys(object);
+    let values=Object.values(object);
+    let array=keys.concat(values);
     return array;
 }
-console.log('Task10 result is: '+objectToArray({firstName:"Moh",age:24}));
+console.log('Task10 result:')
+console.log(objectToArray({firstName:"Moh",age:24}));
 document.getElementById('task10_result').innerHTML=objectToArray({firstName:"Moh",age:24});
 
 //TASK11:
 function arrayToObject (array){
     let obj={};
-    for (let i=0; i<array.length;i++)
+    for (let i=0; i<array.length;i+=2)
     {   
-      return obj= {[array[i]]:array[i+1], [array[i+2]]:array[i+3]}
+      obj[array[i]]=array[i+1];
     }
+    return obj
 }
 console.log('Task11 result:')
 console.log(arrayToObject(["firstName","Moh","age",24]));
@@ -157,50 +165,51 @@ document.getElementById('task11_result').innerHTML=arrayToObject(["firstName","M
 
 //TASK12:
 function onlyNuumber(object){
+    
     let newObj={};
-    for (let i in object)
+    for (let i=0;i<Object.keys(object).length;i++)
     {
-        if(typeof(object[i])==='number'){
-            newObj=object[i];
+        if(typeof(Object.values(object)[i])=='number'){
+            newObj[Object.keys(object)[i]]=Object.values(object)[i];
         }
     }
     return newObj
 }
-console.log('Task12 result is: '+onlyNuumber({firstName:"Moh",age:24,movies:[1,5,"string"]}));
+console.log('Task12 result is: ',onlyNuumber({firstName:"Moh",age:24,movies:[1,5,"string"]}));
 document.getElementById('task12_result').innerHTML=onlyNuumber({firstName:"Moh",age:24,movies:[1,5,"string"]});
 
 //TASK13:
 function onlyString(object){
     let newObj={};
-    for (let i in object)
-    {
-        if(typeof(object[i])==='string'){
-            newObj=object[i];
+    for (let i=0;i<Object.keys(object).length;i++){
+        if (typeof(Object.values(object)[i])=='string'){
+            newObj[Object.keys(object)[i]]=Object.values(object)[i];
         }
     }
     return newObj
 }
-console.log('Task13 result is: '+onlyString({firstName:"Moh",age:24,movies:[1,5,"string"]}));
+console.log('Task13 result is: ',onlyString({firstName:"Moh",age:24,movies:[1,5,"string"]}));
 document.getElementById('task13_result').innerHTML=onlyString({firstName:"Moh",age:24,movies:[1,5,"string"]});
 
 //TASK14:
 function onlyArray(object){
     let newObj={};
-    for (let i in object)
-    {
-        if(Array.isArray(object[i])){
-            newObj=object[i];
-        }
+    for (let i=0;i<Object.keys(object).length;i++)
+    { if(Array.isArray(Object.values(object)[i])){
+        newObj[Object.keys(object)[i]]=Object.values(object)[i];
     }
+      
+    }
+
     return newObj
 }
-console.log('Task14 result is: '+onlyArray({firstName:"Moh",age:24,movies:[1,5,"string"]}));
+console.log('Task14 result is: ',onlyArray({firstName:"Moh",age:24,movies:[1,5,"string"]}));
 document.getElementById('task14_result').innerHTML= onlyArray({firstName:"Moh",age:24,movies:[1,5,"string"]});
 
 //TASK15:
 function keysArray(object){
-    let keys=Object.keys(object)
+    let keys=Object.keys(object);
     return keys
 }
-console.log('Task15 result is: '+keysArray({firstName:"Moh",age:24,movies:[1,5,"string"]}));
+console.log('Task15 result is: ',keysArray({firstName:"Moh",age:24,movies:[1,5,"string"]}));
 document.getElementById('task15_result').innerHTML=keysArray({firstName:"Moh",age:24,movies:[1,5,"string"]});

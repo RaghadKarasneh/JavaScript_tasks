@@ -83,12 +83,18 @@ Change to OR from Italic
 */
 function changeItalicfun(){
     changeTextarea.style.fontStyle='italic';
+    let italicChecked = document.getElementById("italic").checked;
+    changeTextarea.style.fontStyle = (italicChecked ? "italic" : "normal");
 }
 function changeBoldfun(){
     changeTextarea.style.fontWeight='bold';
+    let boldChecked = document.getElementById("bold").checked;
+    changeTextarea.style.fontWeight = (boldChecked ? "bold" : "normal");
 }
 function changeUnderlinefun(){
     changeTextarea.style.textDecoration='underline';
+    let undelineChecked = document.getElementById("underline").checked;
+    changeTextarea.style.textDecorationLine=(undelineChecked ? "underline" : "none");
 }
 /*Task 5: */
 let btn =document.getElementById("task5Submit");

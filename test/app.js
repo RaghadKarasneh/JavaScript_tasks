@@ -1,4 +1,4 @@
-let errorHandel= new Promise(function(resolve, reject){
+/*let errorHandel= new Promise(function(resolve, reject){
   let check=true;
   if(check){
     rescolve('correct')
@@ -14,8 +14,7 @@ errorHandel.then(function(resolve){
 });
 
 
-
-
+*/
 
 
 
