@@ -2,7 +2,7 @@
 
 let formInfo=document.getElementById('mobForm');
 let table=document.getElementById('boadTa');
-
+let locResult=document.getElementById('result');
 let cusInfo=[];
 
 function localStorageX(){
@@ -20,12 +20,14 @@ function callFromLocalStorage(){
 
 callFromLocalStorage()
 
-function mobileForm(useName, typeNameD){
+function mobileForm(useName, typeNameD,locName){
     this.useName=useName;
     this.typeNameD=typeNameD;
+    this.locName=locName;
     this.price=price();
     this.usedOrNot=usedOrNot();
     cusInfo.push(this);
+    getData(locName);
     renderInfo();
    localStorageX();
     console.log(cusInfo);
@@ -45,7 +47,8 @@ function handleSubmit(e) {
     e.preventDefault();
     let useName=e.target.useName.value;
     let typeNameD=e.target.typeNameD.value;
-    new mobileForm(useName,typeNameD)
+    let locName=e.target.locName.value;
+    new mobileForm(useName,typeNameD,locName)
 }
 handleSubmit();
 function renderInfo(){
@@ -71,3 +74,28 @@ function renderInfo(){
     }
 
 }
+
+//********************************************************** */
+
+                    /*API */
+
+
+async function getData(location){
+   let response= await fetch(`https://eu1.locationiq.com/v1/search.php?key=pk.387c44093108cb229d491116cdb062a5&q=${location}&format=json`)
+   console.log(response);
+   let data=await response.json(); //transfer all the data that came from url (fetch) to json
+   console.log(data);
+   
+    let newP=document.createElement('p');
+    locResult.appendChild(newP);
+     newP.innerHTML=`Location Name: ${data[0].display_name} <br>
+     lat: ${data[0].lat} <br>
+     lon: ${data[0].lon}
+     <br>
+     `
+    let imgSrc=data[0].icon;
+    document.getElementById('imgSrc').src=`${imgSrc}`
+}
+
+
+getData();
