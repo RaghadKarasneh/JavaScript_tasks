@@ -33,7 +33,7 @@ function mobileForm(useName, typeNameD,locName){
     console.log(cusInfo);
 }
 function price(){
-    let cost=Math.ceil(Math.random() *(500-50)+50);
+    let cost=Math.ceil(Math.random() *(500-50)+100);
     return cost;
 }
 function usedOrNot(){

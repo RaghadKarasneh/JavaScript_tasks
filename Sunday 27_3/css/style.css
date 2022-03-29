@@ -12,6 +12,9 @@
    /*border: 7px double black;*/
     margin-top: 50px;
 }
+th{
+    border: 1px solid currentColor;
+}
 tr{
     text-align: center;
 }
