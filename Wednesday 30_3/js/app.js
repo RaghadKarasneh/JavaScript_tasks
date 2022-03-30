@@ -133,10 +133,4 @@ function handelSubmit(e){
 }
 handelSubmit();
 function renderInfo(){
-    info.map(function(i,index){
-        nameError.innerHTML=info[index].fullName;
-        birthdateError.innerHTML=info[index].bdate;
-        emailError.innerHTML=info[index].correctEmail;
-
-    })
 }
