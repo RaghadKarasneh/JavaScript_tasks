@@ -8,6 +8,12 @@ let regFormx=document.getElementById('regs_form');
 let birthdateError=document.getElementById('bdate-error');
 let info=[];
 
+/*LocalStorage */
+function LocalStorageFrom(){
+    let array=JSON.stringify(info);
+    localStorage.setItem('formData',array);
+}
+
 /*Regestration Constructor */
 function regForm(fname,lname,bdate,femail,semail,password,spassword){
 
@@ -25,30 +31,30 @@ this.correctPssword=checkPassword(this.password,this.spassword);
 console.log(this.fullName);
 info.push(this);
 renderInfo();
-
+LocalStorageFrom()
 }
+
 /*To return the full name */
 function userName(fname,lname){
     let x;
     let regex = /[a-zA-Z\s]+$/;
     if ((regex.test(fname)) && (regex.test(lname))){
-        
         console.log('correct');
         x = fname + ' '+ lname;
         return x;
     }
     else{
         return 'Incorrect name';
-       
     }
 }
 
 /*To check from the date */
 function checkDate(date)
 {
- let regex=/^\d{4}\-\d{2}\-\d{2}$/;
+ let regex=/(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
  if(regex.test(date)){
      console.log('correct date');
+     return date;
  }
  else{
      console.log('inncorrect date');
@@ -65,13 +71,16 @@ if ((!regex.test(femail)) && (!regex.test(semail)))
     }
     else{
         if (femail==semail){
-            return 'Email has been confirmed';
+             console.log('Email has been confirmed');
+             return 'Email has been confirmed';
         }
         else{
+            console.log(`Emails don't match`);
             return `Emails don't match`;
         }
     }   
   }
+
 /*To check from password */
 function checkPassword(password,spassword){
     let regex=/^(?=.*[a-z])(?=.*[A-Z])(?=(.*[\d]){2,})[A-Za-z\d?]{8,32}$/;
@@ -117,10 +126,4 @@ function handelSubmit(e){
 }
 handelSubmit();
 function renderInfo(){
-    info.map(function(i,index){
-        console.log('hi');
-        firstNameError.innerHTML= info[index].fullName;
-        birthdateError.innerHTML=info[index].bdate;
-
-    })
 }
