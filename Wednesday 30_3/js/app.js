@@ -1,11 +1,13 @@
 'use strict';
 
 let firstName=document.getElementById('fname');
-let firstNameError=document.getElementById('fname-error');
+let nameError=document.getElementById('fname-error');
 let lastName=document.getElementById('lname');
 let lastNameError=document.getElementById('sname-error');
 let regFormx=document.getElementById('regs_form');
 let birthdateError=document.getElementById('bdate-error');
+let emailError=document.getElementById('email-error');
+let passwordError=document.getElementById('password-error');
 let info=[];
 
 /*LocalStorage */
@@ -58,6 +60,7 @@ function checkDate(date)
  }
  else{
      console.log('inncorrect date');
+     emailError.innerHTML='inncorrect date';
  }
 }
 
@@ -67,15 +70,18 @@ function correctEmail(femail,semail){
 
 if ((!regex.test(femail)) && (!regex.test(semail)))
     {
+      emailError.innerHTML= 'Incorrect Email!';
       return  'Incorrect Email!';
     }
     else{
         if (femail==semail){
              console.log('Email has been confirmed');
+             emailError.innerHTML='Email has been confirmed';
              return 'Email has been confirmed';
         }
         else{
             console.log(`Emails don't match`);
+            emailError.innerHTML=`Emails don't match`;
             return `Emails don't match`;
         }
     }   
@@ -89,16 +95,20 @@ function checkPassword(password,spassword){
     let symboles=/[#$@!%&*?]/;
     if ((regex.test(password))&& (regex.test(spassword))){ //To check from 2 passwords syntax
         console.log('password syntax is Incorrect');
+        passwordError.innerHTML= 'password syntax is Incorrect';
         
     }
     else if((!capital.test(password[0])) && (!capital.test(spassword[0]))){ //To check from the first letter
-        console.log('Incorrect! first name must be capital.');
+        console.log( 'Incorrect! first name must be capital.');
+        passwordError.innerHTML= 'Incorrect! first name must be capital.';
     }
     else if((!num.test(password))&&(!num.test(spassword))){
         console.log('You password must contain 2 numbers at least');
+        passwordError.innerHTML= 'You password must contain 2 numbers at least';
     }
     else if((!symboles.test(password)) && !symboles.test(spassword)){
         console.log('You password must contain  at least 1 character');
+        passwordError.innerHTML= 'You password must contain  at least 1 character';
     }
     else if((password===spassword) &&(password.length>=8 && password.length<=32) &&(spassword.length>=8 && spassword.length<=32)){
         console.log('password syntax is correct');
@@ -106,12 +116,9 @@ function checkPassword(password,spassword){
         console.log( 'Passwords match');
     }else{
         console.log(`Passwords don't match or the length is more than 8 or less than 32`);
+        passwordError.innerHTML= `Passwords don't match or the length is more than 8 or less than 32`;
     }
 }
-
-
-
-
 regFormx.addEventListener('submit', handelSubmit);
 function handelSubmit(e){
     e.preventDefault();
@@ -126,4 +133,10 @@ function handelSubmit(e){
 }
 handelSubmit();
 function renderInfo(){
+    info.map(function(i,index){
+        nameError.innerHTML=info[index].fullName;
+        birthdateError.innerHTML=info[index].bdate;
+        emailError.innerHTML=info[index].correctEmail;
+
+    })
 }
