@@ -116,7 +116,7 @@ function checkPassword(password,spassword){
         console.log( 'Passwords match');
     }else{
         console.log(`Passwords don't match or the length is more than 8 or less than 32`);
-        passwordError.innerHTML= `Passwords don't match or the length is incorrect (length must be more or equal than 8 and less than or equal 32`;
+       passwordError.innerHTML= `Passwords don't match or the length is incorrect (length must be more or equal than 8 and less than or equal 32`;
     }
 }
 regFormx.addEventListener('submit', handelSubmit);
@@ -133,4 +133,5 @@ function handelSubmit(e){
 }
 handelSubmit();
 function renderInfo(){
+    
 }
