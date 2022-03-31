@@ -46,6 +46,7 @@ function userName(fname,lname){
         return x;
     }
     else{
+        nameError.innerHTML='Incorrect name'
         return 'Incorrect name';
     }
 }

@@ -11,6 +11,8 @@ GetDataFromLovalStorage()
 
 function renderInformation(parseData){
     parseData.map(function(i){
-    result.innerHTML= `Hello! This is ${i.fullName}, I was born on ${i.bdate} and my email is: ${i.femail}`;
+        let newSpan=document.createElement('span');
+        result.appendChild(newSpan);
+        newSpan.innerHTML= `Hello! This is ${i.fullName}, I was born on ${i.bdate} and my email is: ${i.femail}`;
     })
 }
